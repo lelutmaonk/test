@@ -58,7 +58,7 @@ public class LoginActivity extends AppCompatActivity {
                 public void onResponse(String response) {
                     progressDialog.dismiss();
 
-                    if (response.equalsIgnoreCase("Logged in successfully")) {
+                    if (response.equalsIgnoreCase("loggin success")){
 
                         ed_username.setText("");
                         ed_password.setText("");
@@ -68,6 +68,7 @@ public class LoginActivity extends AppCompatActivity {
                     else {
                         Toast.makeText(LoginActivity.this, response, Toast.LENGTH_SHORT).show();
                     }
+
                 }
             }, new Response.ErrorListener() {
                 @Override
@@ -97,11 +98,6 @@ public class LoginActivity extends AppCompatActivity {
 
     public void moveToRegistration(View view) {
         startActivity(new Intent(getApplicationContext(), RegistrationActivity.class));
-        finish();
-    }
-
-    public void movetoTest(View view) {
-        startActivity(new Intent(getApplicationContext(), MainActivity.class));
         finish();
     }
 }
